@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: jdk1.6.0_45 (Sun Microsystems Inc.)
+Specification-Title: PDF Clown for Java
+Specification-Version: 0.1.2
+Specification-Vendor: Stefano Chizzolini
+Implementation-Title: org.pdfclown
+Implementation-Version: 0.1.2
+Implementation-Vendor: Stefano Chizzolini
+Modified-by: netije@gmail.com
+Github-fork: https://github.com/netije/pdfclown
+Build-IDE: IntelliJ Ultimate 2019.1
+
