@@ -411,6 +411,9 @@ public abstract class Font
         try {
             for (int index = 0, length = text.length(); index < length; index++) {
                 int textCode = text.charAt(index);
+                if (codes.getKey(textCode) == null) {
+                    continue;
+                }
                 byte[] charCode = codes.getKey(textCode).data;
                 encodedStream.write(charCode);
                 usedCodes.add(textCode);
