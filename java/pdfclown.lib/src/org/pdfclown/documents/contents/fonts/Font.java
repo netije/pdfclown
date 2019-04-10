@@ -399,6 +399,23 @@ public abstract class Font
     }
 
     /**
+     * Test of given text: all characters are available in current font
+     *
+     * @param text Text to test
+     * @return TRUE text is fully supported by current font / FALSE some characters are not supported
+     * @since 0.1.2 by netije@gmail.com
+     */
+    public final Boolean isFullyEncodable(String text) {
+        for (int index = 0, length = text.length(); index < length; index++) {
+            int textCode = text.charAt(index);
+            if (codes.getKey(textCode) == null) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * Gets the internal representation of the given text.
      *
      * @param text Text to encode.

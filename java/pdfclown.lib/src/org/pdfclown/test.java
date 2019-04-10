@@ -11,13 +11,17 @@ import java.io.FileNotFoundException;
 
 public class test {
     public static void main(String [ ] args) throws FileNotFoundException {
-        org.pdfclown.files.File mFile = new org.pdfclown.files.File("/home/jeti/Projects/fndt/ditec/pdf/ecupopc.pdf");
+        org.pdfclown.files.File mFile = new org.pdfclown.files.File("d:\\Projects\\Ditec\\ecupopc.pdf");
         Document mDocument = mFile.getDocument();
 
 
-        Font font = Font.get(mDocument, "/home/jeti/Projects/fndt/ditec/ecupopc/src/main/resources/ubuntu/Ubuntu-R.ttf");
-        String sampleText = "不窓植治料";
-        font.encode(sampleText);
+        Font font = Font.get(mDocument, "d:\\Projects\\Ditec\\ubuntu-font-family-0.83\\Ubuntu-R.ttf");
+        String sampleText1 = "不窓植治料";
+        String sampleText2 = "Lorem 不窓植治料";
+        String sampleText3 = "Lorem úäňéťžč";
+        System.out.println(font.isFullyEncodable(sampleText1));
+        System.out.println(font.isFullyEncodable(sampleText2));
+        System.out.println(font.isFullyEncodable(sampleText3));
 
 //        String sampleText = "bobor";
 //        TextFitter tf = new TextFitter(sampleText, 0.0D, font, 12D, false, '-');
